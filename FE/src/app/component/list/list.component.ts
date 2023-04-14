@@ -15,18 +15,18 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAll(0);
+    this.getAll();
   }
 
-  getAll(page: number) {
-    this.busService.findAll(page).subscribe(data => {
+  getAll() {
+    this.busService.findAll().subscribe(data => {
       this.busList = data;
     });
   }
 
   delete() {
     this.busService.delete(this.bus.id).subscribe(data => {
-      this.getAll(0);
+      this.getAll();
       alert('Xoa thanh cong');
     });
   }

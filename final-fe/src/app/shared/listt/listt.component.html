@@ -1,0 +1,21 @@
+
+<table>
+  <tr>
+    <th>STT</th>
+    <th>Tên cơ sở</th>
+    <th>Ngày khai trương</th>
+    <th>Địa chỉ</th>
+    <th>Người quản lí</th>
+    <th>Xoá</th>
+  </tr>
+<ng-template *ngIf="coSo">
+  <tr *ngFor="let c of coSo, index as i">
+    <td>{{i+1}}</td>
+    <td>{{c.tenCoSo}}</td>
+    <td>{{c.ngayKhaiTruong}}</td>
+    <td>{{c.diaChi}}</td>
+    <td>{{c.nhanVien.tenNhanVien}}</td>
+  </tr>
+</ng-template>
+
+</table>

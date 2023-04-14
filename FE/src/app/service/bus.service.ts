@@ -10,8 +10,8 @@ export class BusService {
   constructor(private httpClient: HttpClient) {
   }
 
-  findAll(page: number) {
-    return this.httpClient.get<Bus[]>('http://localhost:8080/list?page=' + page);
+  findAll() {
+    return this.httpClient.get<Bus[]>('http://localhost:8080/list');
   }
 
   delete(id: number) {
@@ -19,7 +19,7 @@ export class BusService {
   }
 
   create(bus: Bus) {
-    return this.httpClient.post('http://localhost:8080', bus);
+    return this.httpClient.post('http://localhost:8080/create', bus);
   }
 
   update(bus: Bus) {

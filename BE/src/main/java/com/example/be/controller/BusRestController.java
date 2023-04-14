@@ -17,6 +17,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin("*")
+@RequestMapping("")
 public class BusRestController {
     @Autowired
     private IBusService iBusService;
@@ -24,9 +25,15 @@ public class BusRestController {
     @Autowired
     private IBusTypeService iBusTypeService;
 
+//    @GetMapping("/list")
+//    private ResponseEntity<?> showList(@PageableDefault(value = 2) Pageable pageable) {
+//        Page<Bus> busPage = iBusService.findAll(pageable);
+//        return new ResponseEntity<>(busPage, HttpStatus.OK);
+//    }
+
     @GetMapping("/list")
-    private ResponseEntity<?> showList(@PageableDefault(value = 2) Pageable pageable) {
-        Page<Bus> busPage = iBusService.findAll(pageable);
+    private ResponseEntity<?> showList() {
+        List<Bus> busPage = iBusService.findAll();
         return new ResponseEntity<>(busPage, HttpStatus.OK);
     }
 
@@ -49,7 +56,7 @@ public class BusRestController {
         return new ResponseEntity<>(busTypeList, HttpStatus.OK);
     }
 
-    @PostMapping("")
+    @PostMapping("/create")
     private ResponseEntity<?> save(@RequestBody Bus bus) {
 
         try {

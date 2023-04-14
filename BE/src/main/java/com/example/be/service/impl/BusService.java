@@ -4,9 +4,9 @@ import com.example.be.model.Bus;
 import com.example.be.repository.IBusRepository;
 import com.example.be.service.IBusService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class BusService implements IBusService {
@@ -14,8 +14,8 @@ public class BusService implements IBusService {
     private IBusRepository iBusRepository;
 
     @Override
-    public Page<Bus> findAll(Pageable pageable) {
-        return iBusRepository.findAll(pageable);
+    public List<Bus> findAll() {
+        return iBusRepository.findAll();
     }
 
     @Override
