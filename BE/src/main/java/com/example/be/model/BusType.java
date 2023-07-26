@@ -12,20 +12,20 @@ public class BusType {
     private Integer busTypeId;
     private String busTypeName;
 
-    @OneToMany(mappedBy = "busType")
-    @JsonBackReference
-    private Set<Bus> buses;
+//    @OneToMany(mappedBy = "busType")
+//    @JsonBackReference
+//    private Set<Bus> buses;
 
     public BusType() {
     }
-
-    public Set<Bus> getBuses() {
-        return buses;
-    }
-
-    public void setBuses(Set<Bus> buses) {
-        this.buses = buses;
-    }
+//
+//    public Set<Bus> getBuses() {
+//        return buses;
+//    }
+//
+//    public void setBuses(Set<Bus> buses) {
+//        this.buses = buses;
+//    }
 
     public Integer getBusTypeId() {
         return busTypeId;

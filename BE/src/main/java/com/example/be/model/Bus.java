@@ -16,21 +16,21 @@ public class Bus {
     private String startGo;
     private String endGo;
     private boolean deleteStatus;
-
-    @ManyToOne
-    @JoinColumn(name = "bus_type_id", referencedColumnName = "busTypeId")
-    private BusType busType;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "bus_type_id", referencedColumnName = "busTypeId")
+//    private BusType busType;
 
     public Bus() {
     }
 
-    public BusType getBusType() {
-        return busType;
-    }
-
-    public void setBusType(BusType busType) {
-        this.busType = busType;
-    }
+//    public BusType getBusType() {
+//        return busType;
+//    }
+//
+//    public void setBusType(BusType busType) {
+//        this.busType = busType;
+//    }
 
     public Integer getId() {
         return id;
